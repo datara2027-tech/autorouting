@@ -1,0 +1,46 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`continue forward through a clear gap after rounding an obstacle 1`] = `
+[
+  [
+    -9,
+    0,
+  ],
+  [
+    -1.5,
+    0,
+  ],
+  [
+    -1.5,
+    2,
+  ],
+  [
+    -0.65,
+    2,
+  ],
+  [
+    -0.65,
+    3,
+  ],
+  [
+    1.5,
+    3,
+  ],
+  [
+    1.5,
+    2,
+  ],
+  [
+    1.5,
+    1,
+  ],
+  [
+    9,
+    1,
+  ],
+  [
+    9,
+    2,
+  ],
+]
+`;

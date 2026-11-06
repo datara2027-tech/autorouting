@@ -309,10 +309,7 @@ export class MultilayerIjump extends GeneralizedAstarAutorouter {
       forwardDir = dirFromAToB(node.parent, node)
     }
 
-    /**
-     * Get the possible next directions (excluding backwards direction), and
-     * excluding the forward direction if we just ran into a wall
-     */
+    // A parent collision may be on a different axis. Check forward clearance at this node.
     const travelDirs1: Array<Direction3d> = [
       { dx: 0, dy: 1, dl: 0 },
       { dx: 1, dy: 0, dl: 0 },
@@ -345,13 +342,6 @@ export class MultilayerIjump extends GeneralizedAstarAutorouter {
           dir.dx === forwardDir.dx * -1 &&
           dir.dy === forwardDir.dy * -1 &&
           dir.dl === forwardDir.dl * -1
-        ) {
-          return false
-        } else if (
-          dir.dx === forwardDir.dx &&
-          dir.dy === forwardDir.dy &&
-          dir.dl === forwardDir.dl &&
-          node.parent?.obstacleHit
         ) {
           return false
         }
